@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>左侧占30%宽度，右侧占70%宽度</title>
+</head>
+<style type="text/css">
+	.container{
+		width: 100%;
+	}
+	.col{
+		height: 200px;
+	}
+
+	.clearfix { overflow: hidden; _zoom: 1; }
+
+	.float-left{
+		float: left;
+		width: 30%;
+		background-color: #ffe6b8;
+	}
+	.float-right{
+		float: right;
+		width: 70%;
+		background-color: #a0b3d6;
+	}
+
+
+
+	.position-left{
+		position: relative;
+		width: 30%;
+		background-color: #ffe6b8;
+	}
+	.position-right{
+		width: 70%;
+		position: relative;
+		background-color: #a0b3d6;
+	}	
+
+	#container-flex{
+		display: -webkit-flex;
+		display: flex;
+	}
+	.flex-left{
+		flex-basis:30%;
+		background-color: #ffe6b8;
+	}
+	.flex-right{
+		flex-basis:70%;
+		background-color: #a0b3d6;
+	}
+</style>
+<body>
+	<div class="container clearfix">
+	<div class="col float-left">左侧占30%宽度，右侧占70%宽度float方法</div>
+	<div class="col float-right">左侧占30%宽度，右侧占70%宽度float方法</div>
+	</div>
+	<br>
+	<br>
+	<div class="container" id="container-flex">
+	<div class="col flex-left">左侧占30%宽度，右侧占70%宽度flex方法</div>
+	<div class="col flex-right">左侧占30%宽度，右侧占70%宽度flex方法</div>
+	</div>	
+</body>
+</html>
